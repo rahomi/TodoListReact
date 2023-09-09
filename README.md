@@ -6,10 +6,7 @@ A simple and intuitive Todo List web application built with React.js. Keep track
 - Add new tasks to your list
 - Mark tasks as completed
 - Delete tasks you no longer need
-- Filter tasks by status (All, Active, Completed)
-- Clear completed tasks with a single click
 - Responsive design for desktop and mobile devices
-- Easily customize your task names
 
 🔧 Technologies Used:
 - React.js
@@ -24,7 +21,7 @@ A simple and intuitive Todo List web application built with React.js. Keep track
 4. Run `npm run dev` to start the development server.
 5. Open your browser and go to http://localhost:[port] to use the app.
 
-🌐 Live Demo:
+🌐 Live Demo: Under Construction
 
 👨‍💻 How to Contribute:
 Contributions are welcome! Feel free to fork this repository, make improvements, and create a pull request. If you encounter any bugs or have suggestions, please open an issue.
