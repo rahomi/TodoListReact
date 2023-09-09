@@ -22,6 +22,17 @@ export default function App(){
     setNewItem("");
   }
 
+  function toggleTodo(id,completed){
+    setTodos(currentTodos =>{
+      return currentTodos.map(todo =>{
+        if(todo.id == id){
+          return {...todo, completed}
+        }
+        return todo
+      })
+    });
+  }
+
   return( 
   <React.Fragment>
     <form className="new-item-form" onSubmit={handleSubmit}>
@@ -41,7 +52,11 @@ export default function App(){
         return(
           <li key={todos.id}>
           <label>
-            <input type="checkbox" checked={todos.completed}/>
+            <input 
+            type="checkbox" 
+            checked={todos.completed}
+            onChange={e => toggleTodo(todos.id,e.target.checked)}
+            />
             {todos.title}
           </label>
           <button className="btn btn-danger">Delete</button>
