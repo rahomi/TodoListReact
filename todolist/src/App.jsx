@@ -33,6 +33,12 @@ export default function App(){
     });
   }
 
+  function deleteTodo(id){
+    setTodos(currentTodos => {
+      return currentTodos.filter( todo => todo.id != id)
+    })
+  }
+
   return( 
   <React.Fragment>
     <form className="new-item-form" onSubmit={handleSubmit}>
@@ -48,18 +54,21 @@ export default function App(){
     </form>
     <h1 className="header">TO DO LIST</h1>
     <ul className="list">
-      {todos.map(todos => {
+      {todos.map(todo => {
         return(
-          <li key={todos.id}>
+          <li key={todo.id}>
           <label>
             <input 
             type="checkbox" 
-            checked={todos.completed}
-            onChange={e => toggleTodo(todos.id,e.target.checked)}
+            checked={todo.completed}
+            onChange={e => toggleTodo(todo.id,e.target.checked)}
             />
-            {todos.title}
+            {todo.title}
           </label>
-          <button className="btn btn-danger">Delete</button>
+          <button 
+          className="btn btn-danger"
+          onClick={() => deleteTodo(todo.id)}
+          >Delete</button>
         </li>
         )
       })}
