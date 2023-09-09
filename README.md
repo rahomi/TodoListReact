@@ -21,8 +21,8 @@ A simple and intuitive Todo List web application built with React.js. Keep track
 1. Clone this repository to your local machine.
 2. Navigate to the project directory.
 3. Run `npm install` to install dependencies.
-4. Run `npm start` to start the development server.
-5. Open your browser and go to http://localhost:3000 to use the app.
+4. Run `npm run dev` to start the development server.
+5. Open your browser and go to http://localhost:[port] to use the app.
 
 🌐 Live Demo:
 
