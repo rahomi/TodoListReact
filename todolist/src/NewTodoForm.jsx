@@ -20,6 +20,7 @@ export function NewTodoForm({onSubmit})
             type="text" id="item"
             value={newItem}
             onChange={e => setNewItem(e.target.value)}
+            autoComplete="off"
             />
       </div>
       <button className="btn">Add</button>
